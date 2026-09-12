@@ -44,10 +44,14 @@ body{
 .navbar ul li a{
     transform: translateX(100px);
 
-    transition: transform ease-in 1.02s;
+    transition: transform ease-in 0.8s;
     transition: font-size ease-in 20ms;
 
     transform-origin: left;
+}
+.navbar ul li:nth-child(5) i{
+    display: inline-block;
+    padding-top: 4px;
 }
 .navbar ul li{
 
@@ -55,7 +59,7 @@ body{
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
-    gap:0.8rem;
+    gap:1rem;
     cursor: pointer;
 
 }
@@ -70,7 +74,8 @@ body{
 
 }
 .navbar ul li i{
-
+display: flex;
+    align-items: center;
     font-size: 20px;
     color: inherit;
 }
@@ -80,11 +85,11 @@ body{
 .toggle{
     position: fixed;
     top:10px;
-    left:-10px;
+    left:0px;
     appearance: none;
     width: 20px;
     height: 20px;
-    background-color: rgba(0, 0, 0, 0.61);
+    background-color: transparent;
     border-radius: 50%;
     transition: all 10ms ease-in;
 }
@@ -106,7 +111,7 @@ body{
 .toggle:checked +ul li a{
         transform: translateX(0);
        font-size: 18px;
-    transition: font-size ease-in 1.05s;
+    transition: font-size ease-in 1s;
 
 
 }
