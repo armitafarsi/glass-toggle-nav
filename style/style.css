@@ -30,6 +30,7 @@ body{
     padding: 25px;
     transition: all ease-in 0.5s;
     transform-origin: left;
+    border: 1px solid rgba(255, 255, 255, 0.34);
 
 
 }
@@ -57,7 +58,7 @@ body{
 
     margin: 25px auto;
     display: flex;
-    flex-wrap: nowrap;
+  flex-wrap: nowrap;
     align-items: center;
     gap:1rem;
     cursor: pointer;
@@ -82,6 +83,18 @@ display: flex;
 .navbar ul li:hover{
     color: dodgerblue;
 }
+.notif{
+    position: relative;
+    left: 25px;
+    width: 20px;
+    height: 20px;
+    padding: 2px;
+    font-size: 12px;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+}
 .toggle{
     position: fixed;
     top:10px;
@@ -95,6 +108,10 @@ display: flex;
 }
 .toggle::before{
     content: 'V';
+    width: 10px;
+    height: 10px;
+    /*border-bottom: 1px solid black;*/
+    /*border-left: 1px solid black;*/
     font-weight: 700;
     padding-top: 3px;
     color: white;
@@ -113,6 +130,10 @@ display: flex;
        font-size: 18px;
     transition: font-size ease-in 1s;
 
+}
+.toggle:checked +ul li span{
+    left: 7px;
+    transition: font-size ease-in 1s;
 
 }
 .navbar:has(.toggle:checked){
