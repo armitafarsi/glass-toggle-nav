@@ -98,30 +98,31 @@ display: flex;
 .toggle{
     position: fixed;
     top:10px;
-    left:0px;
+    left:10px;
     appearance: none;
     width: 20px;
     height: 20px;
     background-color: transparent;
     border-radius: 50%;
     transition: all 10ms ease-in;
+    transform: rotate(45deg);
 }
 .toggle::before{
-    content: 'V';
+    content: '';
     width: 10px;
     height: 10px;
-    /*border-bottom: 1px solid black;*/
-    /*border-left: 1px solid black;*/
+    border-bottom: 1px solid white;
+    border-left: 1px solid white;
     font-weight: 700;
     padding-top: 3px;
     color: white;
  display: flex;
     justify-content: center;
     align-items: center;
-    transform: rotate(90deg);
+
 }
-.toggle:checked{
-    transform: rotate(180deg);
+.toggle:checked {
+    transform: rotate(225deg);
 
 
 }
